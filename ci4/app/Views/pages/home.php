@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="./assets/img/h1.png" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="img/h1.png" />
+  <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -22,7 +22,7 @@
     <nav class="nav bd-grid">
       <div>
         <!-- &#60;&#62; -->
-        <a href="#home" class="nav-logo"><img src="./assets/img/h.png" height="70px" alt="H" /></a>
+        <a href="#home" class="nav-logo"><img src="img/h.png" height="70px" alt="H" /></a>
       </div>
 
       <div class="nav-menu" id="nav-menu">
@@ -43,7 +43,10 @@
             <a href="#contact" class="nav-link contact">Contact</a>
           </li>
           <li class="nav-item">
-          <a href = "#" onclick="myFunction()"> <img src="./assets/img/sumoon.png" alt="" height="20px" width="20px" style="background-color: transparent;"> </a>
+            <a href="#news" class="nav-link news">News</a>
+          </li>
+          <li class="nav-item">
+          <a href = "#" onclick="myFunction()"> <img src="img/sumoon.png" alt="" height="20px" width="20px" style="background-color: transparent;"> </a>
           </li>
         </ul>
       </div>
@@ -76,7 +79,7 @@
       </div>
 
       <div class="home-img">
-        <img src="assets/img/profile.gif" alt="" />
+        <img src="img/mainprofile.png" alt="" />
       </div>
     </section>
 
@@ -86,7 +89,7 @@
 
       <div class="about-container bd-grid">
         <div class="about-img">
-          <img src="assets/img/profile_1.jpg" alt="" />
+          <img src="img/profile_1.jpg" alt="" />
         </div>
 
         <div style="text-align: center">
@@ -166,7 +169,7 @@
           </div>
           <div class="skills-data">
             <div class="skills-names">
-              <img class="skills-icon" src="./assets/img/express.png" alt="" />
+              <img class="skills-icon" src="img/express.png" alt="" />
               <span class="skills-name">Java</span>
             </div>
             <!-- <div class="skills-bar skills-css"></div>  -->
@@ -177,7 +180,7 @@
 
            <div class="skills-data">
             <div class="skills-names">
-              <img class="skills-icon" src="./assets/img/python.png" alt="" />
+              <img class="skills-icon" src="img/python.png" alt="" />
               <span class="skills-name">Python</span>
             </div>
             <!-- <div class="skills-bar skills-css"></div> -->
@@ -276,7 +279,7 @@
 
       <div class="project-container">
         <div class="project-img">
-          <img src="assets/img/01.png" alt="cult.fit" />
+          <img src="img/01.png" alt="cult.fit" />
           <p class="project-title">Nightingale</p>
           <p class="project-subtitle">
             
@@ -308,7 +311,7 @@
 
 
         <div class="project-img">
-          <img src="assets/img/epic.png" alt="Reddit.com" />
+          <img src="img/epic.png" alt="Reddit.com" />
           <p class="project-title">Rahay</p>
           <p class="project-subtitle">
             Rahay will be utilizing the applications of artificial intelligence on the phone’s 
@@ -327,7 +330,7 @@
           </div>
         </div>
         <div class="project-img">
-          <img src="assets/img/mwpharmacheutical.png" alt="Tinde chat" />
+          <img src="img/mwpharmacheutical.png" alt="Tinde chat" />
           <p class="project-title">
             MWPharmaceutical
           </p>
@@ -354,7 +357,7 @@
         </div>
 
         <div class="project-img">
-          <img src="assets/img/SubRosa.png" alt="shop app" />
+          <img src="img/SubRosa.png" alt="shop app" />
           <p class="project-title">
             SUBROSA
           </p>
@@ -384,122 +387,7 @@
   
   <footer class="footer section" id="contact">
     <h2 class="section-title">Get in Touch</h2>
-    <?php
-// define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
-  } else {
-    $name = test_input($_POST["name"]);
-    // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed";
-    }
-  }
-  
-  if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
-  } else {
-    $email = test_input($_POST["email"]);
-    // check if e-mail address is well-formed
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $emailErr = "Invalid email format";
-    }
-  }
-    
-  if (empty($_POST["website"])) {
-    $website = "";
-  } else {
-    $website = test_input($_POST["website"]);
-    // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-      $websiteErr = "Invalid URL";
-    }
-  }
-
-  if (empty($_POST["comment"])) {
-    $comment = "";
-  } else {
-    $comment = test_input($_POST["comment"]);
-  }
-
-  if (empty($_POST["gender"])) {
-    $genderErr = "Gender is required";
-  } else {
-    $gender = test_input($_POST["gender"]);
-  }
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-?>
-<p><span class="error">* required field</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Name: <input type="text" name="name" value="<?php echo $name;?>">
-  <span class="error">* <?php echo $nameErr;?></span>
-  <br><br>
-  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-  <span class="error">* <?php echo $emailErr;?></span>
-  <br><br>
-  Website: <input type="text" name="website" value="<?php echo $website;?>">
-  <span class="error"><?php echo $websiteErr;?></span>
-  <br><br>
-  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-  <br><br>
-  Gender:
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
-  <span class="error">* <?php echo $genderErr;?></span>
-  <br><br>
-  <input type="submit" name="submit" value="Submit">  
-</form>
-
-<?php
-echo "<h2>Your Input:</h2>";
-echo $name;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $website;
-echo "<br>";
-echo $comment;
-echo "<br>";
-echo $gender;
-?>
-
-
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "webprogss211db";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('$firstname', '$lastname', '$email')";
-
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
-?>
 <br><br>
     <div class="footer-social">
       <a href="https://www.linkedin.com/in/lyanna-padillo-8ba1b321a/" target="_blank" class="footer-icon"><i
@@ -521,11 +409,11 @@ $conn->close();
           GitHub
           </i></a>
     </div>
-    <p>&#169; 2022 copyright all right reserved</p>
+    <p>&#169; 2023 copyright all right reserved</p>
   </footer>
 
   <!--===== MAIN JS =====-->
-  <script src="assets/js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
