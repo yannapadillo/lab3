@@ -4,75 +4,74 @@ namespace App\Controllers;
 
 use App\Models\NewsModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
-
 class News extends BaseController
 {
-  public function index()
-  {
-    $model = model(NewsModel::class);
+    public function create()
+    {
+        helper('form');
 
-    $data = [
-      'news'  => $model->getNews(),
-      'title' => 'News archive',
-    ];
+        // Checks whether the form is submitted.
+        if (! $this->request->is('post')) {
+            // The form is not submitted, so returns the form.
+            return view('templates/header', ['title' => 'Create a news item'])
+                . view('news/create')
+                . view('templates/footer');
+        }
 
-    return view('templates/header', $data)
-      . view('news/index')
-      . view('templates/footer');
-  }
+        $post = $this->request->getPost(['title', 'body']);
 
-  public function view($slug = null)
-  {
-    $model = model(NewsModel::class);
+        // Checks whether the submitted data passed the validation rules.
+        if (! $this->validateData($post, [
+            'title' => 'required|max_length[255]|min_length[3]',
+            'body'  => 'required|max_length[5000]|min_length[10]',
+        ])) {
+            // The validation fails, so returns the form.
+            return view('templates/header', ['title' => 'Create a news item'])
+                . view('news/create')
+                . view('templates/footer');
+        }
 
-    $data['news'] = $model->getNews($slug);
+        $model = model(NewsModel::class);
 
-    if (empty($data['news'])) {
-      throw new PageNotFoundException('Cannot find the news item: ' . $slug);
+        $model->save([
+            'title' => $post['title'],
+            'slug'  => url_title($post['title'], '-', true),
+            'body'  => $post['body'],
+        ]);
+
+        return view('templates/header', ['title' => 'Create a news item'])
+            . view('news/success')
+            . view('templates/footer');
     }
 
-    $data['title'] = "News archive";
+    public function index()
+    {
+        $model = model(NewsModel::class);
 
-    return view('templates/header', $data)
-      . view('news/view')
-      . view('templates/footer');
-  }
+        $data = [
+            'news'  => $model->getNews(),
+            'title' => 'News archive',
+        ];
 
-  public function create()
-  {
-    helper('form');
-
-    // Checks whether the form is submitted.
-    if (!$this->request->is('post')) {
-      // The form is not submitted, so returns the form.
-      return view('templates/header', ['title' => 'Create a news item'])
-        . view('news/create')
-        . view('templates/footer');
+        return view('templates/header', $data)
+            . view('news/index')
+            . view('templates/footer');
     }
 
-    $post = $this->request->getPost(['title', 'body']);
+    public function view($slug = null)
+    {
+        $model = model(NewsModel::class);
 
-    // Checks whether the submitted data passed the validation rules.
-    if (!$this->validateData($post, [
-      'title' => 'required|max_length[255]|min_length[3]',
-      'body'  => 'required|max_length[5000]|min_length[10]',
-    ])) {
-      // The validation fails, so returns the form.
-      return view('templates/header', ['title' => 'Create a news item'])
-        . view('news/create')
-        . view('templates/footer');
-    }
+        $data['news'] = $model->getNews($slug);
 
-    $model = model(NewsModel::class);
+        if (empty($data['news'])) {
+            throw new PageNotFoundException('Cannot find the news item: ' . $slug);
+        }
 
-    $model->save([
-      'title' => $post['title'],
-      'slug'  => url_title($post['title'], '-', true),
-      'body'  => $post['body'],
-    ]);
+        $data['title'] = $data['news']['title'];
 
-    return view('templates/header', ['title' => 'Create a news item'])
-      . view('news/success')
-      . view('templates/footer');
-  }
+        return view('templates/header', $data)
+            . view('news/view')
+            . view('templates/footer');
+        }
 }

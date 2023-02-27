@@ -1,26 +1,18 @@
+<h2><?= esc($title) ?></h2>
+
 <?= session()->getFlashdata('error') ?>
 <?= validation_list_errors() ?>
 
-<form action="<?= base_url() . "/news/create" ?>" method="post">
-  <?= csrf_field() ?>
+<form action="/~lzpadillo/lab3/ci4/public/news/create" method="post">
+    <?= csrf_field() ?>
 
-  <?= form_label("Title", "title") ?>
-  <br />
-  <?= form_input("title", set_value("title"), [
-    "placeholder" => "Article title...",
-  ]) ?>
-  <br />
-  <br />
+    <label for="title">Title</label>
+    <input type="input" name="title" value="<?= set_value('title') ?>">
+    <br>
 
-  <?= form_label("Body", "body") ?>
-  <br />
-  <?= form_textarea("body", set_value("body"), [
-    "cols" => "45",
-    "rows" => "4",
-    "placeholder" => "Article content...",
-  ]) ?>
-  <br />
-  <br />
+    <label for="body">Text</label>
+    <textarea name="body" cols="45" rows="4"><?= set_value('body') ?></textarea>
+    <br>
 
-  <input type="submit" name="submit" value="CREATE NEWS ITEM">
+    <input type="submit" name="submit" value="Create news item">
 </form>
