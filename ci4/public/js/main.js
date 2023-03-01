@@ -98,9 +98,9 @@ sr.reveal(".project-img", { interval: 200 });
     element.classList.toggle("dark-mode")
   }
 
-  var messageArr = ["COMSCI Student", "Frontend Developer", "Backend Developer"];
-  var textPosition = 0;
-  var speed = 200;
+  var messageArr = ["COMSCI Student", "Freelancer", "Video Editor"];
+  var textPosition = 2;
+  var speed = 1;
 
   typewriter = () => {
     // for(let i = 0; i < messageArr.length; i++) {

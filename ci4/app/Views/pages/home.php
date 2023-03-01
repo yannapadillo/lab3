@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="img/h1.png" />
+
+  <link href="img/h1.png" rel="icon" type = "image/x-icon">
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -43,7 +44,7 @@
             <a href="#contact" class="nav-link contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a href="#news" class="nav-link news">News</a>
+            <a href="/lab3/ci4/public/news" class="nav-link news">News</a>
           </li>
           <li class="nav-item">
           <a href = "#" onclick="myFunction()"> <img src="img/sumoon.png" alt="" height="20px" width="20px" style="background-color: transparent;"> </a>
@@ -67,7 +68,7 @@
         </h2>
 
         <a href="validation_complete.php" target="_blank"
-          class="button">Exercises</a>
+          class="button">Resume</a>
 
       </div>
 
@@ -383,34 +384,35 @@
     </section>
   </main>
 
-  <!--===== FOOTER + CONTACT=====-->
-  
-  <footer class="footer section" id="contact">
-    <h2 class="section-title">Get in Touch</h2>
+  <!--===== CONTACT=====-->
+  <section class="contact section" id="contact">
+        <h2 class="section-title" data-aos="fade-down">Contact</h2>
 
-<br><br>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/lyanna-padillo-8ba1b321a/" target="_blank" class="footer-icon"><i
-          class="bx bxl-linkedin">
-          <br />
-          LinkedIn</i></a>
-      <a href="https://twitter.com/Tushars2526" target="_blank" class="footer-icon"><i class="bx bxl-twitter">
-          <br />
-          Twitter</i></a>
-      <a href="mailto:lzpadillo@student.apc.edu.ph" target="_blank" class="footer-icon"><i class="bx bx-mail-send">
-          <br />
-          E-mail</i></a>
-      <a href="tel:+63 9771135400" target="_blank" class="footer-icon"><i class="bx bx-phone">
-          <br />
-          Phone</i></a>
-      <a href="https://github.com/yannapadillo" target="_blank" class="footer-icon"><i
-            class="bx bxl-github">
-          <br />
-          GitHub
-          </i></a>
+        <div class="contact_container bd_grid">
+          <form method="post" action="https://getform.io/f/d0e49285-52d1-481d-a594-b413d186d8b0">
+
+        <div class="form-group my-4">
+        <input type="text" class="control_input"  id="name" placeholder="Name" name="name">
+        </div>
+
+    <div class="form-group my-4">
+      <input type="email" class="control_input" id="email"  placeholder="Email" name="email">
     </div>
-    <p>&#169; 2023 copyright all right reserved</p>
-  </footer>
+
+       <div class="form-group my-4">
+          <input class="control_input" id="subject" name="subject" placeholder="Subject" type="subject">
+       </div>
+
+
+        <div class="form-group my-4">
+          <textarea class="control_input" id="desc" rows="5" placeholder="Message" name="desc"></textarea>
+         </div>
+
+        <button type="submit" class="control_button button" data-aos="fade-right" data-aos-delay="450">Submit</button>
+
+        </form>
+            </div>
+               </section>
 
   <!--===== MAIN JS =====-->
   <script src="js/main.js"></script>

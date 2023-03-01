@@ -481,9 +481,14 @@ img.man-icons {
 }
 
 /* ===== CONTACT =====*/
-.contact-input {
-  width: 100%;
-  font-size: var(--normal-font-size);
+.contact {
+  text-align: center;
+  font-weight: var(--font-semi);
+  padding: 3.5rem 0;
+}
+.control_input {
+  width: 50%;
+  font-size: var(--nomral-font-size);
   font-weight: var(--font-semi);
   padding: 1rem;
   border-radius: 0.5rem;
@@ -491,15 +496,16 @@ img.man-icons {
   outline: none;
   margin-bottom: var(--mb-4);
 }
-.contact-button {
+
+
+.control_button {
   display: block;
   border: none;
   outline: none;
-  font-size: var(--normal-font-size);
+  font-size: var(--nomral-font-size);
   cursor: pointer;
-  margin-left: auto;
+  margin: auto;
 }
-
 /* ===== FOOTER =====*/
 .footer {
   background-color: var(--second-color);
