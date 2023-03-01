@@ -44,7 +44,7 @@
             <a href="#contact" class="nav-link contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a href="/lab3/ci4/public/news" class="nav-link news">News</a>
+            <a href="http://apcwebprog.csf.ph/lab3/ci4/public/news" class="nav-link news">News</a>
           </li>
           <li class="nav-item">
           <a href = "#" onclick="myFunction()"> <img src="img/sumoon.png" alt="" height="20px" width="20px" style="background-color: transparent;"> </a>
@@ -389,7 +389,7 @@
         <h2 class="section-title" data-aos="fade-down">Contact</h2>
 
         <div class="contact_container bd_grid">
-          <form method="post" action="/guests/create">
+          <form method="post" action="https://getform.io/f/d0e49285-52d1-481d-a594-b413d186d8b0">
 
         <div class="form-group my-4">
         <input type="text" class="control_input"  id="name" placeholder="Name" name="name">
