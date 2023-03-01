@@ -9,28 +9,28 @@
     <nav class="nav bd-grid">
       <div>
         <!-- &#60;&#62; -->
-        <a href="http://localhost/lab3/ci4/public/home#home" class="nav-logo"><img src="img/h.png" height="70px" alt="H" /></a>
+        <a href="/~lzpadillo/lab3/ci4/public/home#home" class="nav-logo"><img src="img/h.png" height="70px" alt="H" /></a>
       </div>
 
       <div class="nav-menu" id="nav-menu">
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="/lab3/ci4/public/home#home" class="nav-link home active">Home</a>
+            <a href="/~lzpadillo/lab3/ci4/public/home#home" class="nav-link home active">Home</a>
           </li>
           <li class="nav-item">
-            <a href="/lab3/ci4/public/home#about" class="nav-link about">About</a>
+            <a href="/~lzpadillo/lab3/ci4/public/home#about" class="nav-link about">About</a>
           </li>
           <li class="nav-item">
-            <a href="/lab3/ci4/public/home#skills" class="nav-link skills">Skills</a>
+            <a href="/~lzpadillo/lab3/ci4/public/home#skills" class="nav-link skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a href="/lab3/ci4/public/home#projects" class="nav-link projects">Projects</a>
+            <a href="/~lzpadillo/lab3/ci4/public/home#projects" class="nav-link projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a href="/lab3/ci4/public/home#contact" class="nav-link contact">Contact</a>
+            <a href="/~lzpadillo/lab3/ci4/public/home#contact" class="nav-link contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a href="/lab3/ci4/public/news" class="nav-link news">News</a>
+            <a href="/~lzpadillo/lab3/ci4/public/news" class="nav-link news">News</a>
           </li>
           <li class="nav-item">
           <a href = "#" onclick="myFunction()"> <img src="img/sumoon.png" alt="" height="20px" width="20px" style="background-color: transparent;"> </a>
