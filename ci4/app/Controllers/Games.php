@@ -8,6 +8,6 @@ class Games extends BaseController
 {
     public function index()
     {
-        return view('game');
+        return view('games');
     }
 }

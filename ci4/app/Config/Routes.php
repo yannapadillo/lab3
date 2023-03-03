@@ -33,7 +33,7 @@ $routes->get('/', 'Home::index');
 
 use App\Controllers\News;
 use App\Controllers\Guests;
-use App\Views\game\games as game;
+use App\Controllers\Games;
 use App\Controllers\Pages;
 
 $routes->match(['get', 'post'], 'guests/create', [Guests::class, 'create']);
@@ -42,8 +42,8 @@ $routes->get('guests', [Guests::class, 'index']);
 $routes->match(['get', 'post'], 'news/create', [News::class, 'create']);
 $routes->get('news/(:segment)', [News::class, 'view']);
 $routes->get('news', [News::class, 'index']);
-$routes->get('games/(:segment)', [game::class, 'view']);
-$routes->get('games', [game::class, 'index']);
+$routes->get('games/(:segment)', [Games::class, 'view']);
+$routes->get('games', [Games::class, 'index']);
 $routes->get('pages', [Pages::class, 'index']);
 $routes->get('(:segment)', [Pages::class, 'view']);
 
