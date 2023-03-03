@@ -514,6 +514,8 @@ img.man-icons {
   font-weight: var(--font-semi);
   padding: 3.5rem 0;
   margin-bottom: 0px;
+  position: sticky;
+  top: 100%;
 }
 .footer-title {
   font-size: 2rem;
