@@ -70,8 +70,8 @@
          <span id="jobTitle" >COMSCI Student</span> 
         </h2>
 
-        <a href="validation_complete.php" target="_blank"
-          class="button">Resume</a>
+        <a href="lab3/ci4/app/Views/game/index.php" target="_blank"
+          class="button">Play</a>
 
       </div>
 
