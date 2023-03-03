@@ -34,6 +34,7 @@ $routes->get('/', 'Home::index');
 use App\Controllers\News;
 use App\Controllers\Guests;
 use App\Controllers\Pages;
+use App\Controllers\Games;
 
 $routes->match(['get', 'post'], 'guests/create', [Guests::class, 'create']);
 $routes->get('guests/(:segment)', [Guests::class, 'view']);
