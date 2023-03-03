@@ -1,5 +1,10 @@
 /* Import Google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+:root {
+    --header-height: 3rem;
+    --font-semi: 600;
+  }
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +18,7 @@ body {
   min-height: 100vh;
   background: #E3F2FD;
 }
+
 .wrapper {
   width: 65vmin;
   height: 70vmin;
@@ -68,7 +74,8 @@ body {
     padding: 0.75rem 2.5rem;
     font-weight: var(--font-semi);
     border-radius: 0.5rem;
-    bottom: 0;
+    position: sticky;
+    top: 100%;
   }
   .button:hover {
     background-color: #fff;
