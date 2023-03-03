@@ -99,7 +99,7 @@ sr.reveal(".project-img", { interval: 200 });
   }
 
   var messageArr = ["COMSCI Student", "Freelancer", "Video Editor"];
-  var textPosition = 2;
+  var textPosition = 0;
   var speed = 1;
 
   typewriter = () => {

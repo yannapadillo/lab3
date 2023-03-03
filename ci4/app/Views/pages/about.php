@@ -1,1 +1,1 @@
-Welcome to my About Page! Johanne Sanchez
+Welcome to my About Page! Lyanna Padillo
