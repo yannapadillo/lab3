@@ -9,7 +9,6 @@ class Games extends BaseController
     public function index()
     {
         return view('game/index')
-            . view('templates/header')
-            . view('templates/menu');
+    }
     
 }
