@@ -5,7 +5,6 @@
     <title>Lyanna Padillo</title>
     <link href="img/h1.png" rel="icon" type = "image/x-icon">
     <link rel="stylesheet" href="css/snake.css">
-    <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <script src="js/snake.js" defer></script>
@@ -26,10 +25,8 @@
         <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
       </div>
     </div>
-    <footer class="footer section" id="contact">
     <a href="http://apcwebprog.csf.ph/~lzpadillo/lab3/ci4/public/home" target="_blank"
           class="button">Go Back Home</a>
-    </footer>
 
   </body>
 </html>

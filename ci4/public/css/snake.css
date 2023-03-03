@@ -60,6 +60,22 @@ body {
   border-right: 1px solid #171B26;
 }
 
+.button {
+    display: inline-block;
+    background-color: #3f70f4;
+    border: 1px solid #3f70f4;
+    color: #fff;
+    padding: 0.75rem 2.5rem;
+    font-weight: var(--font-semi);
+    border-radius: 0.5rem;
+    bottom: auto;
+  }
+  .button:hover {
+    background-color: #fff;
+    color: var(--first-color);
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+  }
+  
 @media screen and (max-width: 800px) {
   .wrapper {
     width: 90vmin;
