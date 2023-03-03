@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<h2><?= esc($title) ?></h2>
+<h2 class="section-title">News Archive</h2>
 
 <?php if (! empty($news) && is_array($news)): ?>
 
