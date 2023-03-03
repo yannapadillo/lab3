@@ -70,7 +70,7 @@
          <span id="jobTitle" >COMSCI Student</span> 
         </h2>
 
-        <a href="lab3/ci4/app/Views/game/index.php" target="_blank"
+        <a href="http://apcwebprog.csf.ph/~lzpadillo/lab3/ci4/public/game" target="_blank"
           class="button">Play</a>
 
       </div>

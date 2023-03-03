@@ -11,9 +11,9 @@ class Pages extends BaseController
         return view('welcome_message');
     }
 
-    public function view($page = 'home')
+    public function view($page = 'index')
     {
-        if (! is_file(APPPATH . 'Views/pages/' . $page . '.php')) {
+        if (! is_file(APPPATH . 'Views/game/' . $page . '.php')) {
             // Whoops, we don't have a page for that!
             throw new PageNotFoundException($page);
         }
@@ -22,6 +22,5 @@ class Pages extends BaseController
 
         return view('templates/header', $data)
             . view('pages/' . $page)
-            . view('templates/footer');
     }
 }
