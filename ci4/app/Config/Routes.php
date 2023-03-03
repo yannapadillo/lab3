@@ -42,8 +42,8 @@ $routes->get('guests', [Guests::class, 'index']);
 $routes->match(['get', 'post'], 'news/create', [News::class, 'create']);
 $routes->get('news/(:segment)', [News::class, 'view']);
 $routes->get('news', [News::class, 'index']);
+$routes->get('games/(:segment)', [game::class, 'view']);
 $routes->get('games', [game::class, 'index']);
-$routes->get('(:segment)', [game::class, 'view']);
 $routes->get('pages', [Pages::class, 'index']);
 $routes->get('(:segment)', [Pages::class, 'view']);
 
