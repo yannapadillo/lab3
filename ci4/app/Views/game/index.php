@@ -25,9 +25,11 @@
         <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
       </div>
     </div>
-    <link rel="stylesheet" href="css/styles.css">
-    <a href="http://apcwebprog.csf.ph/~lzpadillo/lab3/ci4/public/home" target="_blank"
-          class="button">Go Back Home</a>
+      <div class = "button">
+        <a href="http://apcwebprog.csf.ph/~lzpadillo/lab3/ci4/public/home" target="_blank">
+        Go Back Home
+        </a>
+      </div>
 
     
 
