@@ -513,6 +513,7 @@ img.man-icons {
   text-align: center;
   font-weight: var(--font-semi);
   padding: 3.5rem 0;
+  margin-bottom: 0px;
 }
 .footer-title {
   font-size: 2rem;
