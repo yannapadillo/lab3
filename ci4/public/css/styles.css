@@ -527,6 +527,16 @@ img.man-icons {
   color: #fff;
   margin: 0 var(--mb-2);
 }
+/* ===== STICKY FOOTER STYLING =====*/
+body{
+  min-height: 100vh;
+}
+
+.sticky-footer{
+  position: sticky;
+  top: 100%;
+
+}
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (min-width: 768px) {

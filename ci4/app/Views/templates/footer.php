@@ -14,7 +14,7 @@
   <title>Lyanna Padillo</title>
 </head>
 <hr />
-  <footer class="footer section" id="contact">
+  <footer class="sticky-footer" id="contact">
     <div class="footer-social">
       <?php echo link_tag("css/styles.css"); ?>
       <a href="https://www.linkedin.com/in/lyanna-padillo-8ba1b321a/" target="_blank" class="footer-icon"><i
