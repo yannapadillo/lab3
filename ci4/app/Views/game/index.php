@@ -26,9 +26,10 @@
         <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
       </div>
     </div>
-
+    <footer class="footer section" id="contact">
     <a href="http://apcwebprog.csf.ph/~lzpadillo/lab3/ci4/public/home" target="_blank"
           class="button">Go Back Home</a>
+    </footer>
 
   </body>
 </html>
