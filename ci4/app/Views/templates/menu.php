@@ -30,7 +30,7 @@
             <a href="/~lzpadillo/lab3/ci4/public/home#contact" class="nav-link contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a href="http://apcwebprog.csf.ph/~lzpadillo/lab3/ci4/public/guests" class="nav-link contact">Guests</a>
+            <a href="http://apcwebprog.csf.ph/~lzpadillo/lab3/ci4/public/guests" class="nav-link guests">Guests</a>
           </li>
           <li class="nav-item">
             <a href="/~lzpadillo/lab3/ci4/public/news" class="nav-link news">News</a>
