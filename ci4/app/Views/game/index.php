@@ -11,10 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <script src="js/snake.js" defer></script>
+    <script src="js/main.js"></script>
   </head>
-<?php echo link_tag('css/styles.css'); ?>
-<?php echo link_tag('js/main.js'); ?>
-<header class="l-header">
+  <body>
+  <header class="l-header">
     <nav class="nav bd-grid">
       <div>
         <!-- &#60;&#62; -->
@@ -55,8 +55,6 @@
       </div>
     </nav>
   </header>
-  <script src="js/main.js"></script>
-  <body>
     <div class="wrapper">
       <div class="game-details">
         <span class="score">Score: 0</span>

@@ -41,10 +41,10 @@
             <a href="#projects" class="nav-link projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a href="#contact" class="nav-link contact">Contact</a>
+            <a href="#contact" class="nav-link contacts">Contact</a>
           </li>
           <li class="nav-item">
-            <a href="http://apcwebprog.csf.ph/~lzpadillo/lab3/ci4/public/guests" class="nav-link contact">Guests</a>
+            <a href="http://apcwebprog.csf.ph/~lzpadillo/lab3/ci4/public/guests" class="nav-link guests">Guests</a>
           </li>
           <li class="nav-item">
             <a href="http://apcwebprog.csf.ph/~lzpadillo/lab3/ci4/public/news" class="nav-link news">News</a>
