@@ -24,7 +24,7 @@
 
   <?php foreach ($news as $news_item) : ?>
 
-    <h2 class="section-title">News Archive</h2>
+    <h2>News Archive</h2>
 
     <div class="main">
       <?= esc($news_item['body']) ?>
