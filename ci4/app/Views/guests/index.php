@@ -1,4 +1,4 @@
-<p>Can't find your name? <?= anchor("guests/create", "Register here!") ?></p>
+<p>Not yet registered? <?= anchor("guests/create", "Register here!") ?></p>
 <?php if (!empty($guests) && is_array($guests)) : ?>
 
   <?php foreach ($guests as $guest) : ?>

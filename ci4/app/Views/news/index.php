@@ -18,29 +18,28 @@
 </head>
 
 <body>
+<h2 class="section-title">News Archive</h2>
 
-<p>Want to submit an article? <?= anchor("news/create", "You can do so here!") ?></p>
-<?php if (!empty($news) && is_array($news)) : ?>
+<?php if (! empty($news) && is_array($news)): ?>
 
-  <?php foreach ($news as $news_item) : ?>
+    <?php foreach ($news as $news_item): ?>
 
-    <h2>News Archive</h2>
+        <h3><?= esc($news_item['title']) ?></h3>
 
-    <div class="main">
-      <?= esc($news_item['body']) ?>
-    </div>
-    <p>
-      <?= anchor("news/" . esc($news_item['slug'], 'url'), "View article") ?>
-    </p>
+        <div class="body">
+            <?= esc($news_item['body']) ?>
+        </div>
+        <p><a href="/~lzpadillo/lab3/ci4/public/news/<?= esc($news_item['slug'], 'url') ?>">View article</a></p>
 
-  <?php endforeach ?>
+    <?php endforeach ?>
 
-<?php else : ?>
+<?php else: ?>
 
-  <h2>No News</h2>
+    <h3>No News</h3>
 
-  <p>Unable to find any news for you.</p>
+    <p>Unable to find any news for you.</p>
 
 <?php endif ?>
+
 </body>
 </html>
