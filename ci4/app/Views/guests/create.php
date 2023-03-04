@@ -1,3 +1,4 @@
+<h2 class="section-title">Register</h2>
 <?= session()->getFlashdata('error') ?>
 <?= validation_list_errors() ?>
 
@@ -44,3 +45,4 @@
 <?php
 echo script_tag("css/styles.css");
 echo script_tag("js/main.js");
+?>
