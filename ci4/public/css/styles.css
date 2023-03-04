@@ -540,27 +540,16 @@ body{
 
 }
 
-input[type=text] {
-  color: var(--black);
-  font-size: 16pt;
-  font-family: "IBM Plex Sans", sans-serif;
-  padding: 0.5em;
-  background-color: var(--white);
-  border: 2pt solid var(--dark-white);
-  border-bottom: 2pt solid var(--blue);
-  width: 50%;
-}
-
 input[type=submit] {
   display: block;
   margin-left: auto;
   margin-right: 0;
-  background-color: var(--dark-blue);
+  background-color: var(--white);
   font-size: 14pt;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   border: none;
-  color: var(--white);
+  color: var(--first-color);
   padding: 1em 3em;
   text-decoration: none;
   border-radius: 5pt;
@@ -568,7 +557,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: var(--blue);
+  background-color: var(--white);
 }
 
 .error {
