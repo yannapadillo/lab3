@@ -1,4 +1,5 @@
 <p>Not yet registered? <?= anchor("guests/create", "Register here!") ?></p>
+<h2 class="section-title">Guest List</h2>
 <?php if (!empty($guests) && is_array($guests)) : ?>
 
   <?php foreach ($guests as $guest) : ?>

@@ -40,3 +40,7 @@
 
   <input type="submit" name="submit" value="ADD GUEST">
 </form>
+
+<?php
+echo script_tag("css/styles.css");
+echo script_tag("js/main.js");
