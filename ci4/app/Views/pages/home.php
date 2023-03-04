@@ -392,7 +392,7 @@
         <h2 class="section-title" data-aos="fade-down">Contact</h2>
 
         <div class="contact_container bd_grid">
-          <form method="post" action="https://getform.io/f/d0e49285-52d1-481d-a594-b413d186d8b0">
+          <form method="post" action="https://getform.io/f/98d4c676-20eb-49f1-a496-0feb25528014">
 
         <div class="form-group my-4">
         <input type="text" class="control_input"  id="name" placeholder="Name" name="name">

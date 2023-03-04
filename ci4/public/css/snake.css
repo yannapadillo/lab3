@@ -77,11 +77,15 @@ body {
     position: sticky;
     top: 100%;
   }
-  .button:hover {
+.button:hover {
     background-color: #fff;
     color: var(--first-color);
     box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
   }
+
+a[href] {
+  color:#ffffff
+}
   
 @media screen and (max-width: 800px) {
   .wrapper {
